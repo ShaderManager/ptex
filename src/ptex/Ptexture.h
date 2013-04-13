@@ -136,13 +136,13 @@ struct Ptex {
 
     /** Look up value of given data type that corresponds to the normalized value of 1.0. */
     static float OneValue(DataType dt) {
-	static const float one[] = { 255.0, 65535.0, 1.0, 1.0 };
+	static const float one[] = { 255.0f, 65535.0f, 1.0f, 1.0f };
 	return one[dt]; 
     }
 
     /** Lookup up inverse value of given data type that corresponds to the normalized value of 1.0. */
     static float OneValueInv(DataType dt) {
-	static const float one[] = { 1.0/255.0, 1.0/65535.0, 1.0, 1.0 };
+	static const float one[] = { 1.0f / 255.0f, 1.0f / 65535.0f, 1.0f, 1.0f };
 	return one[dt]; 
     }
 

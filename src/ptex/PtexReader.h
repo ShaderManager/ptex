@@ -115,8 +115,10 @@ public:
 	virtual void release() {
 	    AutoLockCache lock(_cache->cachelock);
 	    // first, unref all lmdData refs
-	    for (int i = 0, n = _lmdRefs.size(); i < n; i++)
-		_lmdRefs[i]->unref();
+	    for (size_t i = 0, n = _lmdRefs.size(); i < n; i++)
+		{
+			_lmdRefs[i]->unref();
+		}
 	    _lmdRefs.resize(0);
 
 	    // finally, unref self

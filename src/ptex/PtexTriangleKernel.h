@@ -194,7 +194,7 @@ class PtexTriangleKernel : public Ptex {
 	// build even iterator
 	ke.rowlen = resu;
 	ke.wscale = 1.0f/(resu*resu);
-	float scale = ke.rowlen;
+	float scale = (float)ke.rowlen;
 	ke.u = u * scale - float(1/3.0);
 	ke.v = v * scale - float(1/3.0);
 	ke.u1 = int(ceilf(u1 * scale - float(1/3.0)));
